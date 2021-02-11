@@ -1,4 +1,4 @@
-export const CREATE_POST = 'POST/CREATE_POST'
+export const CREATE_POST = 'POST/CREATE_POST' // POST - это модуль, к которому относится данный экшин
 export const FETCH_POSTS = 'POST/FETCH_POSTS'
 export const REQUEST_POSTS = 'POST/REQUEST_POSTS'
 export const SHOW_LOADER = 'APP/SHOW_LOADER'

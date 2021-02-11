@@ -20,7 +20,6 @@ class PostForm extends React.Component {
     if (!title.trim()) {
       return this.props.showAlert('Название поста не может быть пустым')
     }
-
     const newPost = {
       title, id: Date.now().toString()
     }
@@ -67,3 +66,4 @@ const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostForm)
+// первый аргумент - стейт, второй - массив action-ов, которые необходимо спроецировать на свойства данного компонента
