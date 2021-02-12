@@ -1,5 +1,5 @@
 import React from 'react'
-import {connect} from 'react-redux' // HOC
+import {connect} from 'react-redux' // HOC, позволяет получить данные из state
 import Post from './Post'
 
 const Posts = ({syncPosts}) => {
@@ -9,9 +9,9 @@ const Posts = ({syncPosts}) => {
   return syncPosts.map(post => <Post post={post} key={post.id} />)
 }
 
-const mapStateToProps = state => { // функция преобразовывает весь стейт в пропсы
+const mapStateToProps = state => { // функция преобразовывает (мапит) весь стейт в пропсы
   return {
-    syncPosts: state.posts.posts // нам нужно преобразовать только конкретные поля
+    syncPosts: state.postsReducerKey.posts // нам нужно преобразовать только конкретные поля
   } // syncPosts - произвольное название переменной
 }
 

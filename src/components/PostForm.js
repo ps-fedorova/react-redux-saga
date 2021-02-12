@@ -40,11 +40,12 @@ class PostForm extends React.Component {
     return (
       <form onSubmit={this.submitHandler}>
         <div className="form-group">
-          <label htmlFor="title">Напишите пост</label>
+          <label htmlFor="title"/>
           <input
             type="text"
             className="form-control"
             id="title"
+            placeholder="напишите пост"
             value={this.state.title}
             name="title"
             onChange={this.changeInputHandler}
@@ -62,7 +63,7 @@ const mapDispatchToProps = {
 }
 
 const mapStateToProps = state => ({
-  alert: state.app.alert
+  alert: state.appReducerKey.alert
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostForm)

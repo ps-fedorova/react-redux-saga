@@ -6,8 +6,9 @@ import {Loader} from './Loader'
 
 export default () => {
   const dispatch = useDispatch()
-  const posts = useSelector(state => state.posts.fetchedPosts)
-  const loading = useSelector(state => state.app.loading)
+  // обозначаем, что нам нужно достать из стора (хук useSelector)
+  const posts = useSelector(state => state.postsReducerKey.fetchedPosts)
+  const loading = useSelector(state => state.appReducerKey.loading)
 
   if (loading) {
     return <Loader />
